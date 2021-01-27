@@ -37,6 +37,7 @@ namespace Medium2
             Console.WriteLine("Please enter the employee ID\n");
             int employeeId = Convert.ToInt32(Console.ReadLine());
             var result = from item in empList where item.Id == employeeId select item;
+            Console.WriteLine("The employee details:\n");
             foreach (Employee empobj in result)
             {
                 Console.WriteLine(empobj);

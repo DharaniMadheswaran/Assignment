@@ -24,7 +24,7 @@ namespace Medium4
 
         public void PrintEmployee()
         {
-            Console.WriteLine("Please enter the employee Name\n");
+            Console.WriteLine("Please enter the employee Id\n");
             int employeeId = Convert.ToInt32(Console.ReadLine());
 
             List<Employee> newEmpList = empList.ToList();

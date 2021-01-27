@@ -40,51 +40,51 @@ namespace Hard
         {
             Console.WriteLine("Please enter the employee ID\n");
             int employeeId = Convert.ToInt32(Console.ReadLine());
-            foreach (var item1 in empList)
+            foreach(var item in empList)
             {
-                if (!(item1.Id == employeeId))
+                if(item.Id==employeeId)
                 {
                     PrintEmployee(employeeId);
+                    Console.WriteLine("**Please enter the updated employee details**\n");
+                    Employee emp1 = new Employee();
+                    emp1.ModifyEmployeeDetailsFromUser();
+                    var details = empList.FirstOrDefault(e => e.Id == employeeId);
+                    if (details != null)
+                    {
+                        details.Name = emp1.Name;
+                        details.Age = emp1.Age;
+                        details.Salary = emp1.Salary;
+                    }
                 }
-                else
-                {
-                    Console.WriteLine("Please enter valid ID");
-                    ModifyEmployeeDetails();
-                }
+                //else
+                //{
+                //    Console.WriteLine("--------Invalid EmployeeId----------");
+                //}
             }
-            Console.WriteLine("**Please enter the updated employee details**\n");
-            Employee emp1 = new Employee();
-            emp1.ModifyEmployeeDetailsFromUser();
-            var details = empList.FirstOrDefault(e => e.Id == employeeId);
-            if (details != null)
-            {
-                details.Name = emp1.Name;
-                details.Age = emp1.Age;
-                details.Salary = emp1.Salary;
-            }
+                        
+            
         }
 
         public void PrintEmployee(int employeeId)
         {
-            foreach(var item1 in empList)
-            {
-                if (!(item1.Id==employeeId))
-                {
-                    Console.WriteLine("Enter Vaild EmployeeID");
-                    Console.WriteLine("Please enter the employee ID\n");
-                    int empId = Convert.ToInt32(Console.ReadLine());
-                    PrintEmployee(empId);
-
-                }
-                else
+           foreach(var item1 in empList)
+           {
+                if(item1.Id==employeeId)
                 {
                     var result = from item in empList where item.Id == employeeId select item;
                     foreach (Employee empobj in result)
                     {
                         Console.WriteLine(empobj);
+                        
                     }
                 }
-            }
+                //else
+                //{
+                //    Console.WriteLine("------Invalid EmployeeID----------");
+                    
+                   
+                //}
+           }
             
             
         }

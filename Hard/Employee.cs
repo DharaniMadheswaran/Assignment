@@ -50,13 +50,22 @@ namespace Hard
             }            
         }
         public void ModifyEmployeeDetailsFromUser()
-        {            
-            Console.WriteLine("Please enter the employee name");
-            name = Console.ReadLine();
-            Console.WriteLine("Please enter the employee age");
-            age = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Please enter the employee salary");
-            salary = Convert.ToDouble(Console.ReadLine());
+        {
+            try
+            {
+                Console.WriteLine("Please enter the employee name");
+                name = Console.ReadLine();
+                Console.WriteLine("Please enter the employee age");
+                age = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Please enter the employee salary");
+                salary = Convert.ToDouble(Console.ReadLine());
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Enter the correct input");
+                ModifyEmployeeDetailsFromUser();
+            }
+
         }
 
         public override string ToString()

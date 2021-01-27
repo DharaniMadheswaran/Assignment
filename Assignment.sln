@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Easy3", "Easy3\Easy3.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Easy4", "Easy4\Easy4.csproj", "{7612E2CE-6EB0-4A3A-9466-016362D45A81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dictionary", "Dictionary\Dictionary.csproj", "{053FD08C-AA97-4B31-AD82-3D6D1744D050}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medium1", "Dictionary\Medium1.csproj", "{053FD08C-AA97-4B31-AD82-3D6D1744D050}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medium2", "Medium2\Medium2.csproj", "{54E1810B-A6DC-4916-9253-C7E88E122EBE}"
 EndProject

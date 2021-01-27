@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Medium3
 {
-    class Employee
+    class Employee : IComparable<Employee>
     {
         int id, age;
         string name;
@@ -23,7 +23,21 @@ namespace Medium3
             this.name = name;
             this.salary = salary;
         }
-        
+        public int CompareTo(Employee other)
+        {
+            if (this.Salary < other.Salary)
+            {
+                return 1;
+            }
+            else if (this.Salary > other.Salary)
+            {
+                return -1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
         public void TakeEmployeeDetailsFromUser()
         {
             Console.WriteLine("Please enter the employee ID");
